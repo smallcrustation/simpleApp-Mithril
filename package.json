@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -p 3000 public | npm "
-    
+    "start": "parcel ./src/index.html"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +15,8 @@
     "mithril": "^2.0.4"
   },
   "devDependencies": {
-    "@types/mithril": "^2.0.2"
+    "@types/mithril": "^2.0.2",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.5"
   }
 }

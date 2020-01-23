@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    // "target": "ES5",
-    // "lib": [
-    //   "ES2015.promise"
-    // ],
-    "esModuleInterop": true
-  }
+    "target": "ES5",
+    "module": "commonjs",
+    "baseUrl": "./src",
+    "paths": {
+      "~*": ["./*"]
+    }
+  },
+  "include": ["src/**/*"]
+
 }
