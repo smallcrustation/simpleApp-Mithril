@@ -3,10 +3,13 @@
     "target": "ES5",
     "module": "commonjs",
     "baseUrl": "./src",
+    "strict": true,
+    "esModuleInterop": true,
     "paths": {
       "~*": ["./*"]
     }
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 
 }
