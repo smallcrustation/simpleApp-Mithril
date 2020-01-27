@@ -1,14 +1,14 @@
-$primary-color: rgb(78, 78, 78);
-
 .user-list{
   color: $primary-color;
   .user-list-item{
-    border: 1px #000000 solid;
+    text-align: left;
+    border: 1px $prim-border-color solid;
     margin: 10px;
     padding: 10px;
+    max-width: 13em;
   }
 
   .user-list-item:hover{
-    background-color: darken($color: rgb(235, 235, 235), $amount: 1);
+    background-color: darken($color: rgb(235, 235, 235), $amount: 10);
   }
 }
