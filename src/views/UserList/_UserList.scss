@@ -1,11 +1,15 @@
 .user-list{
   color: $primary-color;
+  display: flex;
+  flex-direction: column;
   .user-list-item{
     text-align: left;
     border: 1px $prim-border-color solid;
     margin: 10px;
     padding: 10px;
     max-width: 13em;
+    color: $primary-color;
+    text-decoration: none;
   }
 
   .user-list-item:hover{

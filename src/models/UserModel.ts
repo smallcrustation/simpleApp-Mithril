@@ -26,16 +26,24 @@ const UserModel = {
 
   async getUserById(id: string){
     try{
-      const res: {data: User} = await m.request({
+      const res: User = await m.request({
         method: 'GET',
         url: `https://rem-rest-api.herokuapp.com/api/users/${id}`,
         withCredentials: true
       })
-      console.log(res)
-      return UserModel.selectedUser = res.data
+      return UserModel.selectedUser = res
     } catch(err){
       console.error(err.message)
     }
+  },
+
+  save: function(){
+    return m.request({
+      method: 'PUT',
+      url: `https://rem-rest-api.herokuapp.com/api/users/${UserModel.selectedUser.id}`,
+      body: UserModel.selectedUser,
+      withCredentials: true
+    })
   }
 }
 
