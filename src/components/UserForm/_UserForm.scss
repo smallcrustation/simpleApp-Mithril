@@ -1,4 +1,4 @@
-.user-form{
+form{
   padding: 0 1em;
 
   color: $primary-color;
@@ -25,6 +25,7 @@
     margin: 0 0 2em 0;
     padding: 1em 2em;
     border-radius: $btn-border-rad;
+    max-width: 100px;
   }
   button:hover{
     cursor: pointer;

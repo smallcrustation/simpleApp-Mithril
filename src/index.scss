@@ -3,8 +3,9 @@ $prim-highlight-color: rgb(235, 235, 235);
 $prim-border-color: rgb(78, 78, 78);
 $btn-border-rad: 1em;
 
-@import './views/UserList/UserList';
-@import './views//UserForm//UserForm';
+@import './components/Layout/Layout';
+@import './components/UserList/UserList';
+@import './components/UserForm/UserForm';
 
 body{
   font-family: monospace;

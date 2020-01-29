@@ -16,11 +16,11 @@ export default {
     return m('.user-form', {
       onsubmit: function(e: any){
         e.preventDefault()
-        UserModel.save()
+        UserModel.updateUserById()
         m.route.set('/list')
       }
     },[
-      m('h2', 'USER FORM PAGE'),
+      m('h2', 'UPDATE USER FORM PAGE'),
       m('form', [
         m('div.first-name', [
           m('label', 'First Name'),
