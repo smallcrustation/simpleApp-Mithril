@@ -10,8 +10,14 @@ const UserModel = {
   // ############### USER LIST ###############
   list: [] as User[], // <User[]>[]
 
-  async loadList(limit: number | object = 10) {
+  async loadList(addToLimit: number | object = 0) {
     console.log('loadList()')
+    let limit = UserModel.list.length < 5 ? 5 : UserModel.list.length
+    // bc oninit: sends an object as a param, set it to default limit
+    if(typeof addToLimit == "object") addToLimit = 0
+
+    limit += addToLimit
+    console.log(limit)
     try {
       const res: { data: User[] } = await m.request({
         method: 'GET',
