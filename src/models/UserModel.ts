@@ -17,14 +17,15 @@ const UserModel = {
     if(typeof addToLimit == "object") addToLimit = 0
 
     limit += addToLimit
-    console.log(limit)
+    // console.log(limit)
     try {
       const res: { data: User[] } = await m.request({
         method: 'GET',
         url: `https://rem-rest-api.herokuapp.com/api/users?limit=${limit}`,
         withCredentials: true // allows cookies
       }) // mithril auto converts res body to json
-      return (UserModel.list = res.data)
+      UserModel.list = res.data
+      return false
     } catch (err) {
       return console.error(err.message)
     }
